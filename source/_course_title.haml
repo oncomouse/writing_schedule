@@ -1,0 +1,15 @@
+- course_title = "Course Title"
+- course_subtitle = "Course Subtitle"
+- if File.exists? 'source/course.yml'
+	- require 'yaml'
+	- course_information = YAML.load_file('source/course.yml')
+	- if course_information["course_title"]
+		- course_title = course_information["course_title"]
+		- if course_title =~ / \: /
+			(course_title, course_subtitle) = course_title.split(" : ")
+		- else
+			- course_subtitle = nil
+%strong
+	= course_title
+- if not course_subtitle.nil?
+	= course_subtitle

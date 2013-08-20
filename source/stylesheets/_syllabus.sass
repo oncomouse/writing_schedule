@@ -1,0 +1,42 @@
+@import bear_defaults
+@import neat/neat
+
+.syllabus
+	@include outer-container
+	padding: 0
+		bottom: 1.618em
+	.unit
+		@include span-columns(10 of 10)
+		padding:
+			top: 1.618em
+		&:first-child
+			padding:
+				top: 0
+	.class
+		@include span-columns(10 of 10)
+		padding:
+			top: golden-ratio(1em, -1)
+		border-bottom: 1px solid $class_border_color
+		&:last-child
+			border-bottom: 0
+		&:hover
+			background:
+				color: rgba($class_hover_color, 0.5)
+		.date,.activity
+			p
+				margin:
+					bottom: ($line-height / 4)
+			p.holiday
+				font:
+					weight: bold
+
+
+@media screen and (min-width: $daddy_bear_column_size)
+	.class
+		@include span-columns(10 of 10)
+		.date
+			@include span-columns(2 of 10)
+		.activity
+			@include span-columns(8 of 10)
+			padding:
+				left: 0

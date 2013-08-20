@@ -1,0 +1,10 @@
+.class
+	.date
+		%p
+			- # The first line prints the month and day, separated by a period, with a lead zero for single digit months & days
+			= "#{sprintf "%02d", date.month}.#{sprintf "%02d", date.mday}"
+			- # This line prints the abbreviated day name.
+			= "#{Date::ABBR_DAYNAMES[date.wday]}"
+	.activity
+		:markdown
+			#{content}

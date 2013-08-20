@@ -1,0 +1,7 @@
+- course_description = lorem.paragraph
+- if File.exists? 'source/course.yml'
+	- require 'yaml'
+	- course_information = YAML.load_file('source/course.yml')
+	- if course_information['course_description']
+		- course_description = course_information['course_description']
+= course_description

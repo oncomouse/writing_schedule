@@ -1,0 +1,7 @@
+
+- row_title = "Week #{week_number}"
+- if week_title != ""
+	- row_title += " &ndash; #{week_title}"
+- if syllabus_display.print_week_names
+	= print_row_title(row_title)
+= content

@@ -1,0 +1,107 @@
+/* 8. CUSTOM LAYOUT & TYPOGRAPHY (Daddy bear)
+ ----------------------------------------------------------------------------------------*/
+@import bear_defaults
+
+body
+	margin: 0
+
+p, ol, ul, blockquote
+	max-width: $daddy_bear_column_size
+
+/* TinyNav Setup */
+.tinynav
+	display: none
+nav
+	ul
+		display: block
+/* End TinyNav Setup */
+
+#page_container
+	@include outer-container
+	max-width: $daddy_bear_column_size
+	margin: 0 auto
+	@include clearfix
+
+header, section, article, aside, #course_description, nav
+	width: 100%
+
+header,section
+	float: none
+	//padding: 0 $grid-padding
+	@include clearfix
+
+header
+	margin:
+		top: 1.618em
+		bottom: 1.618em
+	h1
+		text:
+			align: center
+		padding:
+			left: 0
+			right: 0em
+			top: 1em
+			bottom: 2em
+		margin:
+			right: 0.2em
+		padding:
+			right: 0.2em
+	nav
+		position: relative
+		top: auto
+		a
+			font-size: 1em
+			line-height: inherit
+		
+section
+	@include span-columns(10)
+	@include shift(1)
+	margin:
+		bottom: 9.531em
+	aside
+		.widget
+			width: 96%	
+	article
+		margin:
+			left: -1em
+		padding: 1em
+		border-radius: 0px
+
+#course_description
+	border: 0px
+	border-radius: 0px
+	background: inherit
+	padding: 0
+
+#content		
+	border: 1px solid $content_border_color
+		right: 0px
+
+
+footer
+	font:
+		size: 0.86em
+	display: block
+	background:
+		color: $footer_background_color
+	padding: $grid-padding
+		bottom: 5.89em
+	*
+		max-width: 100%
+
+/* 9. CUSTOM LAYOUT & TYPOGRAPHY (Mummy bear)
+ ----------------------------------------------------------------------------------------*/
+@media screen and (min-width: $mummy_bear_column_size) and (max-width: $daddy_bear_column_size)
+	#page_container
+		min-width: $mummy_bear_column_size
+	header h1, #course_information
+		padding:
+			left: 2%
+			right: 2%
+	header h1
+		text-align: left
+		padding:
+			right: 0
+		border:
+			right: 0
+			left: 1px solid $body_font_color

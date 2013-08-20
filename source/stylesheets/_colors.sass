@@ -1,0 +1,35 @@
+@import palette
+
+// This is the master color for the whole course. Some fun ones are defined in _palette.sass:
+$course_color: $blue
+
+$complement_color: invert($course_color)
+
+$body_background_color: $course_color
+$body_font_color: $black
+$body_link_color: darken($course_color, 10%)
+$body_link_hover_color: $complement_color
+$body_select_color: $complement_color
+
+$header_background_color: $course_color
+$header_link_color: $body_background_color
+
+$content_background_color: $white
+$content_border_color: $body_link_color
+
+$widget_border_color: $content_border_color
+$widget_background_color: lighten($course_color, 40%)
+
+$nav_link_color: $widget_border_color
+$nav_link_background_color: $widget_background_color
+$nav_link_hover_background_color: $body_link_hover_color
+$nav_link_hover_color: $white
+
+$nav_link_active_color: $white
+$nav_link_active_background_color: $content_border_color
+
+$footer_border_color: $widget_border_color
+$footer_background_color: $widget_background_color
+
+$class_border_color: darken($course_color, 20%)
+$class_hover_color: lighten($complement_color, 30%)
