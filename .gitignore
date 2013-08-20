@@ -2,6 +2,8 @@ source/stylesheets/.sass-cache
 source/stylesheets/.sass-cache/*
 
 Gemfile.lock
+build/*
+build
 
 # OS generated files #
 ######################
